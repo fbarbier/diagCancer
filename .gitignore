@@ -29,3 +29,9 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Lucene Indexes ###
+/indexes/*
+
+### MAC OS ###
+.DS_Store
