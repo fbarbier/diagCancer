@@ -8,10 +8,12 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.Date;
 
+//`PatientID`, `NumPatient`, `Sexe`, `DateNaissance`, `Prenom`, `Nom`)
+
 @Data
 
 @Entity
-@Table(name = "patients")
+@Table(name = "Patient")
 @Indexed
 public class Patient {
 
@@ -20,10 +22,13 @@ public class Patient {
     private Long id;
 
     @NotNull
+    private Long numPatient;
+
+    @NotNull
     private String sexe;
 
     @NotNull
-    private Date dateNaissance;
+    private java.sql.Date dateNaissance;
 
     @NotNull
     @Size(max=100)
