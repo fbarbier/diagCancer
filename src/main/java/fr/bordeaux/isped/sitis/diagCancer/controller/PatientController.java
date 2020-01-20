@@ -2,6 +2,7 @@ package fr.bordeaux.isped.sitis.diagCancer.controller;
 
 import fr.bordeaux.isped.sitis.diagCancer.exception.ResourceNotFoundException;
 import fr.bordeaux.isped.sitis.diagCancer.model.Patient;
+import fr.bordeaux.isped.sitis.diagCancer.model.Trait;
 import fr.bordeaux.isped.sitis.diagCancer.repository.PatientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -34,6 +35,7 @@ public class PatientController {
             post.setDateNaissance(patientRequest.getDateNaissance());
             post.setPrenom(patientRequest.getPrenom());
             post.setNom(patientRequest.getNom());
+            post.setTrait(patientRequest.getTrait());
             return patientRepository.save(post);
         }).orElseThrow(() -> new ResourceNotFoundException("PatientId " + patientId + " not found"));
     }

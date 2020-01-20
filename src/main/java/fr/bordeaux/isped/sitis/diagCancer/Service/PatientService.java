@@ -8,4 +8,10 @@ public interface PatientService {
 
     List<Patient> searchPatients(String searchText);
 
+    List<Patient> searchPatientsFuzzy(String searchText);
+
+    List<Object[]> searchPatientsSimilar(Patient entity);
+
+    List<Patient> findAll();
+
 }
